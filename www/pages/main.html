@@ -1,73 +1,73 @@
 <template>
   <!-- Page, data-name contains page name which can be used in callbacks -->
   <div class="page" data-name="home">
-	<!-- Top Navbar -->
-	<div class="navbar">
-	  <div class="navbar-inner">
-		<div class="left">
-		  <a href="#" class="link icon-only panel-open" data-panel="left">
-			<i class="icon f7-icons ios-only">menu</i>
-			<i class="icon material-icons md-only">menu</i>
-		  </a>
-		</div>
-		<div class="title sliding">My App</div>
-		<div class="right">
-		  <a href="#" class="link icon-only panel-open" data-panel="right">
-			<i class="icon f7-icons ios-only">menu</i>
-			<i class="icon material-icons md-only">menu</i>
-		  </a>
-		</div>
-	  </div>
-	</div>
-	<!-- Toolbar-->
-	<div class="toolbar">
-	  <div class="toolbar-inner">
-		<a href="/run/test/" class="link">Left Link</a>
-		<a href="#" class="link">Right Link</a>
-	  </div>
-	</div>
-	<!-- Scrollable page content-->
-	<div class="page-content view-inner">
+  <!-- Top Navbar -->
+  <div class="navbar">
+    <div class="navbar-inner">
+    <div class="left">
+      <a href="#" class="link icon-only panel-open" data-panel="left">
+      <i class="icon f7-icons ios-only">menu</i>
+      <i class="icon material-icons md-only">menu</i>
+      </a>
+    </div>
+    <div class="title sliding">My App</div>
+    <div class="right">
+      <a href="#" class="link icon-only panel-open" data-panel="right">
+      <i class="icon f7-icons ios-only">menu</i>
+      <i class="icon material-icons md-only">menu</i>
+      </a>
+    </div>
+    </div>
+  </div>
+  <!-- Toolbar-->
+  <div class="toolbar">
+    <div class="toolbar-inner">
+    <a href="/run/test/" class="link">Left Link</a>
+    <a href="#" class="link">Right Link</a>
+    </div>
+  </div>
+  <!-- Scrollable page content-->
+  <div class="page-content view-inner">
 
-	  <div class="block-title">My Runs</div>
-	  <div class="list media-list">
-		  <ul>
-			  {{#each this.runs}}
-				<li>
-				  <a href="/run/{{js 'encodeURIComponent(this.name)'}}/" class="item-link item-content">
-					<div class="item-inner">
-					  <div class="item-title-row">
-						<div class="item-title">{{name}}</div>
-						<div class="item-after">{{js '(this.badges || []).length'}} badges</div>
-					  </div>
-					  <div class="item-subtitle">Caught: {{js '(this.pokemon || []).length'}}</div>
-					  <div class="item-subtitle">Deceased: {{js '(this.deceased || []).length'}}</div>
-					  <div class="item-text">{{notes}}</div>
-					</div>
-				  </a>
-				</li>
-			  {{/each}}
-			  </li>
-				  <a href="#" class="item-link item-content popup-open" data-popup="#new-run">
-					<div class="item-inner">
-						<div class="item-title button button-raised button-fill">ADD NEW RUN</div>
-					</div>
-				  </a>
-			  </li>
-		  </ul>
-	  </div>
+    <div class="block-title">My Runs</div>
+    <div class="list media-list">
+      <ul>
+        {{#each this.runs}}
+        <li>
+          <a href="/run/{{js 'encodeURIComponent(this.name)'}}/" class="item-link item-content">
+          <div class="item-inner">
+            <div class="item-title-row">
+            <div class="item-title">{{name}}</div>
+            <div class="item-after">{{js '(this.badges || []).length'}} badges</div>
+            </div>
+            <div class="item-subtitle">Caught: {{js '(this.pokemon || []).length'}}</div>
+            <div class="item-subtitle">Deceased: {{js '(this.deceased || []).length'}}</div>
+            <div class="item-text">{{notes}}</div>
+          </div>
+          </a>
+        </li>
+        {{/each}}
+        </li>
+          <a href="#" class="item-link item-content popup-open" data-popup="#new-run">
+          <div class="item-inner">
+            <div class="item-title button button-raised button-fill">ADD NEW RUN</div>
+          </div>
+          </a>
+        </li>
+      </ul>
+    </div>
 
-	  <div class="block-title">Panels</div>
-	  <div class="block block-strong">
-		<div class="row">
-		  <div class="col-50">
-			<a href="#" class="button button-raised button-fill panel-open" data-panel="left">Left Panel</a>
-		  </div>
-		  <div class="col-50">
-			<a href="#" class="button button-raised button-fill panel-open" data-panel="right">Right Panel</a>
-		  </div>
-		</div>
-	  </div>
-	</div>
+    <div class="block-title">Panels</div>
+    <div class="block block-strong">
+    <div class="row">
+      <div class="col-50">
+      <a href="#" class="button button-raised button-fill panel-open" data-panel="left">Left Panel</a>
+      </div>
+      <div class="col-50">
+      <a href="#" class="button button-raised button-fill panel-open" data-panel="right">Right Panel</a>
+      </div>
+    </div>
+    </div>
+  </div>
   </div>
 </template>
