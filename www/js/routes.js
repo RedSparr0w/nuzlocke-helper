@@ -19,6 +19,7 @@ routes = [
       {
         context: {
           runs: runs,
+          games: games,
         }
       }
     );
