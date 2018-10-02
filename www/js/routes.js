@@ -9,7 +9,7 @@ routes = [
     var app = router.app;
 
     // We got user data from request
-    var runs = JSON.parse(window.localStorage['runs'] || '[]');
+    var runs = loadStorage('runs', []);
 
     // Resolve route to load page
     resolve(
